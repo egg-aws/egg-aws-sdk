@@ -9,8 +9,8 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-aws-sdk.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-aws-sdk
-[travis-image]: https://img.shields.io/travis/egg-aws/egg-aws-sdk.svg?style=flat-square
-[travis-url]: https://travis-ci.org/egg-aws/egg-aws-sdk
+[travis-image]: https://api.travis-ci.com/egg-aws/egg-aws-sdk.svg
+[travis-url]: https://travis-ci.com/egg-aws/egg-aws-sdk
 [codecov-image]: https://img.shields.io/codecov/c/github/egg-aws/egg-aws-sdk.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/egg-aws/egg-aws-sdk?branch=master
 [david-image]: https://img.shields.io/david/egg-aws/egg-aws-sdk.svg?style=flat-square

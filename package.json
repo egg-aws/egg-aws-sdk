@@ -38,6 +38,7 @@
     "autod": "autod"
   },
   "files": [
+    "config",
     "app.js"
   ],
   "ci": {

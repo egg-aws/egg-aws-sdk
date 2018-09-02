@@ -7,6 +7,7 @@ const AWS = require('aws-sdk');
 describe('test/aws-sdk.test.js', () => {
   const app = mock.app();
 
+  before(() => app.ready());
   after(() => app.close());
   afterEach(mock.restore);
 

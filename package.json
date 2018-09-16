@@ -40,7 +40,8 @@
   },
   "files": [
     "config",
-    "app.js"
+    "app.js",
+    "app"
   ],
   "ci": {
     "version": "8, 10"

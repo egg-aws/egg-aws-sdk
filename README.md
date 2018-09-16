@@ -30,6 +30,8 @@ $ npm i egg-aws-sdk --save
 
 ## Usage
 
+### config
+
 ```js
 // {app_root}/config/plugin.js
 exports.awsSdk = {
@@ -38,11 +40,37 @@ exports.awsSdk = {
 };
 ```
 
+### mockService
+
+- app.mockAwsService(serviceName, version, methodName, replyBody) mock the service method with the mock replyBody.
+- app.restoreAwsServie(serviceName, version, methodName) restore the mocked mehtod.
+
 ## Example
+
+- Get S3
 
 ```js
 const DynamoDB = app.AWS.DynamoDB;
 const S3 = app.AWS.S3;
+```
+
+- Mock DynamoDB
+
+```js
+const mockBody = {
+  AccountMaxReadCapacityUnits: 200,
+  AccountMaxWriteCapacityUnits: 200,
+  TableMaxReadCapacityUnits: 100,
+  TableMaxWriteCapacityUnits: 100,
+};
+
+app.mockAwsService('dynamodb', '2012-08-10', 'describeLimits', {
+  statusCode: 200,
+  body: mockBody,
+});
+
+const dynamodb = new app.AWS.DynamoDB({});
+const res = await dynamodb.describeLimits().promise();
 ```
 
 ## Questions & Suggestions
